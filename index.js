@@ -30,7 +30,7 @@ async function run() {
             app.get('/user',async(req,res) =>{
                 const cursor = userCollection.find({});
                 const user =await cursor.toArray();
-                res.send(user);
+                res.json(user);
             })
            //post api For userCollection
             app.post('/user',async(req,res) =>{
@@ -48,7 +48,7 @@ async function run() {
             app.get('/tour',async(req,res) =>{
                const cursor  = tourCollection.find({});
                const tour = await cursor.toArray();
-               res.send(tour); 
+               res.json(tour); 
             })
 
             //post api for tourCollection
